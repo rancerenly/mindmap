@@ -50,7 +50,7 @@
 1. **Клонирование репозитория**
 
    ```bash
-   git clone [https://github.com/caVenikk/itmo_practice](https://github.com/rancerenly/mindmap)
+   git clone https://github.com/rancerenly/mindmap
    cd mindmap
    ```
 
@@ -62,4 +62,4 @@
 
 ### Сайт
 
-Сайт доступен по адресу [localhost:8080](localhost:8080)
+Сайт доступен по адресу http://localhost:8080
