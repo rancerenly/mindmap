@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://backend:3000/mindmap";
+const API_BASE_URL = "http://localhost:3000/mindmap";
 
 let cy;
 

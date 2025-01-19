@@ -71,6 +71,64 @@ document.getElementById('searchInput').addEventListener('keydown', (event) => {
         }
     }
 });
+document.getElementById('viewTermsButton').addEventListener('click', () => {
+    window.location.href = 'terms.html';
+});
+
+document.getElementById('downloadJSONButton').addEventListener('click', downloadJSON);
+
+document.getElementById('downloadCSVButton').addEventListener('click', downloadCSV);
+
+async function downloadCSV() {
+    try {
+        const response = await fetch(API_BASE_URL + '/export/csv');
+
+        if (!response.ok) {
+            throw new Error(`Ошибка: ${response.status}`);
+        }
+
+        const blob = await response.blob();
+
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'mindmap.csv';
+        document.body.appendChild(a);
+        a.click();
+
+        a.remove();
+        window.URL.revokeObjectURL(url);
+    } catch (error) {
+        console.error("Ошибка при загрузке CSV:", error);
+    }
+}
+
+async function downloadJSON() {
+    try {
+        const response = await fetch(API_BASE_URL + '/export/json');
+
+        if (!response.ok) {
+            throw new Error(`Ошибка: ${response.status}`);
+        }
+
+        const blob = await response.blob();
+
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'terms.json';
+        document.body.appendChild(a);
+        a.click();
+
+
+        a.remove();
+        window.URL.revokeObjectURL(url);
+    } catch (error) {
+        console.error("Ошибка при загрузке JSON:", error);
+    }
+}
+
+
 
 // Инициализация графа
 initializeMindMap();

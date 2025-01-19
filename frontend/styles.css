@@ -57,6 +57,9 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
 
 #settingsMenu.hidden {
@@ -66,8 +69,6 @@ body {
 #settingsMenu button {
     display: block;
     width: 100%;
-    padding: 8px 10px;
-    font-size: 14px;
     text-align: left;
     background-color: #e89ab4;
     border: none;
@@ -80,10 +81,9 @@ body {
     background-color: #d6789f;
 }
 
-/* Граф */
 #cy {
     width: 100%;
-    height: calc(100vh - 50px); /* Учитываем высоту панели управления */
+    height: calc(100vh - 50px);
 }
 
 #tooltip {
@@ -99,3 +99,41 @@ body {
     z-index: 1000;
     display: none;
 }
+
+#termCardsContainer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.term-card {
+    background-color: #f9c2d1;
+    border: 2px solid #e89ab4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.term-card h2 {
+    margin: 0 0 10px;
+}
+
+.term-card a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.button {
+    background-color: #e89ab4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #d07fa2;
+}
+
+
