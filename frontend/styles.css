@@ -1,0 +1,101 @@
+#controls {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+    position: relative; 
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+#searchInput {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#searchButton {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #e89ab4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #d6789f;
+}
+
+/* Кнопка шестеренки */
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.icon-button:hover {
+    color: #d6789f;
+}
+
+/* Меню настроек */
+#settingsMenu {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+}
+
+#settingsMenu.hidden {
+    display: none;
+}
+
+#settingsMenu button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #e89ab4;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#settingsMenu button:hover {
+    background-color: #d6789f;
+}
+
+/* Граф */
+#cy {
+    width: 100%;
+    height: calc(100vh - 50px); /* Учитываем высоту панели управления */
+}
+
+#tooltip {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
+    max-width: 200px;
+    z-index: 1000;
+    display: none;
+}

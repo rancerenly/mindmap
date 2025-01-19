@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+</head>
+<body>
+<div id="controls">
+    <input type="text" id="searchInput" placeholder="Введите название термина">
+    <button id="searchButton">Поиск</button>
+    <button id="settingsButton" class="icon-button">
+        ⚙️
+    </button>
+    <div id="settingsMenu" class="hidden">
+        <button id="resetCanvasButton">Сбросить канвас</button>
+    </div>
+</div>
+<div id="cy"></div>
+
+<script src="mindmap.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
